@@ -67,7 +67,7 @@ If you're not familiar with technical setups, follow these steps to get kidsnote
 2. Copy and paste the following command, then press Enter:
 
 ```shell
-docker run -p -v %USERPROFILE%\Desktop\config.yaml:/config/config.yaml -v %USERPROFILE%\Desktop\albums:/data/kidsnote ghcr.io/karolistamutis/kidsnoter:latest download-albums -vvv
+docker run -v %USERPROFILE%\Desktop\config.yaml:/config/config.yaml -v %USERPROFILE%\Desktop\albums:/data/kidsnote ghcr.io/karolistamutis/kidsnoter:latest download-albums -vvv
 ```
 
 3. Wait for the command to finish, depending on amount of photos and your Internet connection speed it may take up to a few hours or more. You should see content appearing in the `albums` folder you've created on your Desktop earlier as it runs.
