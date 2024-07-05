@@ -20,4 +20,4 @@ LABEL org.opencontainers.image.source=https://github.com/karolistamutis/kidsnote
 
 EXPOSE 9091
 
-ENTRYPOINT ["./kidsnoter"]
+CMD ["./kidsnoter"]
