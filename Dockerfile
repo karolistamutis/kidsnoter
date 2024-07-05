@@ -16,6 +16,8 @@ WORKDIR /root
 COPY --from=builder /app/kidsnoter .
 COPY --from=builder /app/templates ./templates
 
+LABEL org.opencontainers.image.source=https://github.com/karolistamutis/kidsnoter
+
 EXPOSE 9091
 
 ENTRYPOINT ["./kidsnoter"]
