@@ -1,0 +1,14 @@
+services:
+  kidsnoter:
+    container_name: kidsnoter
+    network_mode: bridge
+    environment:
+      TZ: "Europe/Zurich"
+    volumes:
+      - "./config.yaml:/config/config.yaml"
+      - "./storage:/data"
+    ports:
+      - "9099:9091"
+    image: ghcr.io/karolistamutis/kidsnoter:latest
+    restart: unless-stopped
+    command: ["./kidsnoter", "serve", "-vvv"]

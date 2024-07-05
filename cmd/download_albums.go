@@ -3,8 +3,6 @@ package cmd
 import (
 	"context"
 	"fmt"
-	"path/filepath"
-
 	"github.com/karolistamutis/kidsnoter/config"
 	"github.com/karolistamutis/kidsnoter/downloading"
 	"github.com/karolistamutis/kidsnoter/listing"
@@ -74,8 +72,7 @@ func runDownloadAlbums(cmd *cobra.Command, args []string) error {
 }
 
 func downloadAlbumsForChild(ctx context.Context, downloader *downloading.Downloader, child *models.Child, outputDir string) error {
-	childDir := filepath.Join(outputDir, child.Name)
-	err := downloader.DownloadAlbums(ctx, child.ID, childDir)
+	err := downloader.DownloadAlbums(ctx, child.ID, outputDir)
 	if err != nil {
 		return fmt.Errorf("error downloading albums for %s: %w", child.Name, err)
 	}

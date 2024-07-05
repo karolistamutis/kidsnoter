@@ -143,7 +143,7 @@ The following environment variables can be used to override `config.yaml` settin
 ### Commandline flags
 
 * `-v` or `-vv` or `-vvv` or `-vvvv` for most verbose log output
-* `--overwrite` bool flag for `sync` or `download-albums` to always download files and rewrite album descriptions.
+* `--overwrite` bool flag for `serve` or `download-albums` to always download files and rewrite album descriptions.
 
 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
